@@ -1,0 +1,16 @@
+﻿<!-- loading screen-->
+<div class="loading_outer">
+    @if (!string.IsNullOrEmpty(this.Title))
+    {
+        <h2>@this.Title</h2>
+    }
+    <div>Loading...</div>
+
+    <!-- CSS based loading animation from https://codepen.io/Morningtrain/pen/dYNbXr -->
+    <div class="cssload-thecube">
+        <div class="cssload-cube cssload-c1"></div>
+        <div class="cssload-cube cssload-c2"></div>
+        <div class="cssload-cube cssload-c4"></div>
+        <div class="cssload-cube cssload-c3"></div>
+    </div>
+</div>

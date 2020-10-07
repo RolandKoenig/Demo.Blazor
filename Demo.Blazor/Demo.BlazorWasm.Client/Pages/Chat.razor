@@ -1,0 +1,42 @@
+﻿@page "/chat"
+
+<h3>Chat</h3>
+
+<EditForm Model="@NewMessage" OnValidSubmit="@SendMessageAsync">
+    <DataAnnotationsValidator />
+
+    <div class="row form-group">
+        <div class="col-md">
+            <label>User</label>
+            <InputText class="form-control" id="user" @bind-Value="NewMessage.User" />
+            <ValidationMessage For="@(() => NewMessage.User)" />
+        </div>
+        <div class="col-md">
+            <label>Message</label>
+            <InputText class="form-control" id="message" @bind-Value="NewMessage.Message" />
+            <ValidationMessage For="(() => NewMessage.Message)" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send</button>
+</EditForm>
+
+<hr>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var actMessage in ChatHistory)
+        {
+            <tr>
+                <td>@actMessage.User</td>
+                <td>@actMessage.Message</td>
+            </tr>
+        }
+    </tbody>
+</table>

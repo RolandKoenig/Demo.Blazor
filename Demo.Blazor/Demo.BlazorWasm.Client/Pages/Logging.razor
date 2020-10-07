@@ -1,0 +1,66 @@
+﻿@page "/logging"
+
+<h3>Logging</h3>
+
+<EditForm Model="@Request" OnValidSubmit="@HandleValidSubmitAsync">
+    <DataAnnotationsValidator />
+
+    <div class="row form-group">
+        <div class="col-md">
+            <label>Minimum timestamp</label>
+            <InputLocalTimeStamp class="form-control" @bind-Value="Request.MinTimeStamp" />
+        </div>
+        <div class="col-md">
+            <label>Maximum timestamp</label>
+            <InputLocalTimeStamp class="form-control" @bind-Value="Request.MaxTimeStamp" />
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-4">
+            <label>Max count of entries</label>
+            <InputNumber class="form-control" @bind-Value="Request.MaxCountEntries" />
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md">
+            <label>Search text</label>
+            <InputText class="form-control" @bind-Value="Request.SearchString" />
+        </div>
+    </div>
+
+    <ValidationSummary />
+
+    <button type="submit" disabled="@IsLoading" class="btn btn-primary">Load</button>
+</EditForm>
+
+<br />
+
+<LoadingScreenSwitch IsLoading="@IsLoading">
+    @if (this.Result.Lines.Count == 0)
+    {
+        <p>No data</p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Category</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var actLine in this.Result.Lines)
+                {
+                    <tr>
+                        <td>@actLine.TimeStamp.LocalDateTime</td>
+                        <td>@actLine.Category</td>
+                        <td>@actLine.Message</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</LoadingScreenSwitch>

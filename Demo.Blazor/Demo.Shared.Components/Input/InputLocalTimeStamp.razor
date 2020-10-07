@@ -1,0 +1,27 @@
+﻿@using System.Drawing
+@using System.Text.RegularExpressions
+@inherits InputBase<DateTimeOffset>
+
+<input type="datetime" @attributes=AdditionalAttributes class=@CssClass @bind=CurrentValueAsString />
+
+@code
+{
+    protected override string FormatValueAsString(DateTimeOffset value)
+    {
+        return value.LocalDateTime.ToString();
+    }
+
+    protected override bool TryParseValueFromString(string value, out DateTimeOffset result, out string validationErrorMessage)
+    {
+        validationErrorMessage = null;
+        if (DateTime.TryParse(value, out var dateTime))
+        {
+            result = new DateTimeOffset(dateTime);
+        }
+        else
+        {
+            result = this.Value;
+        }
+        return true;
+    }
+}

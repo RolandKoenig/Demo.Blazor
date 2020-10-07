@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>BlazorWebAdmin</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="css/loading.css" rel="stylesheet" />
+</head>
+
+<body>
+    <app>
+        <!-- loading screen-->
+        <div class="loading_outer">
+            <h1>Demo Blazor WASM</h1>
+            <div>Loading...</div>
+
+            <!-- CSS based loading animation from https://codepen.io/Morningtrain/pen/dYNbXr -->
+            <div class="cssload-thecube">
+                <div class="cssload-cube cssload-c1"></div>
+                <div class="cssload-cube cssload-c2"></div>
+                <div class="cssload-cube cssload-c4"></div>
+                <div class="cssload-cube cssload-c3"></div>
+            </div>
+        </div>
+    </app>
+
+    <!-- Error information -->
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <!-- Communication with blazor backend -->
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>
