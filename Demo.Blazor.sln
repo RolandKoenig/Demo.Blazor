@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Root", "_Root", "{2201A54C
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PWA", "PWA", "{BD0E2F9B-06BA-4160-A1D5-ED2FA77302E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Blazor.BlazorWasmPwa", "Demo.Blazor.BlazorWasmPwa\Demo.Blazor.BlazorWasmPwa.csproj", "{D5E809AB-AB11-4989-AC9A-95D23F448CF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{71649C81-BA4F-4C93-9CB2-9FAC8D41F145}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71649C81-BA4F-4C93-9CB2-9FAC8D41F145}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71649C81-BA4F-4C93-9CB2-9FAC8D41F145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E809AB-AB11-4989-AC9A-95D23F448CF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E809AB-AB11-4989-AC9A-95D23F448CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E809AB-AB11-4989-AC9A-95D23F448CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E809AB-AB11-4989-AC9A-95D23F448CF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,7 @@ Global
 		{43E9849B-44F4-4872-9E3A-90F41771F963} = {CFB7A2C3-301C-4A2A-A2B7-E35DF27008A5}
 		{3CE9BB66-3100-4F61-8247-C5A559295972} = {CFB7A2C3-301C-4A2A-A2B7-E35DF27008A5}
 		{0FC4D3C7-297A-44E8-AB95-33C3BDA30984} = {540C84C6-6839-421A-AF8C-68EDCD193623}
+		{D5E809AB-AB11-4989-AC9A-95D23F448CF2} = {BD0E2F9B-06BA-4160-A1D5-ED2FA77302E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B259E467-4441-4FC9-9733-25AEC11D135B}
