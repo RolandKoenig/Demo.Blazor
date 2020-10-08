@@ -30,6 +30,7 @@ namespace Demo.BlazorServer
 
             services.AddSingleton<ICommonInfoRequestService, CommonInfoRequestService>();
             services.AddSingleton<ILoggingRequestService, LoggingRequestService>();
+            services.AddSingleton<IChatService, ChatService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

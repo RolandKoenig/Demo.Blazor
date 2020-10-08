@@ -45,7 +45,7 @@ namespace Demo.BlazorWasm.Client.Pages
             _chatConnection = await this.ChatService.ConnectToChatAsync(this.NavigationManager.BaseUri);
             _chatConnection.MessageReceived += (sender, eArgs) =>
             {
-                this.ChatHistory.Add(eArgs.Message);
+                this.ChatHistory.Insert(0, eArgs.Message);
                 this.StateHasChanged();
             };
         }

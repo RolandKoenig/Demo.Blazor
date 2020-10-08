@@ -20,5 +20,10 @@ namespace Demo.Shared.Dto
             get;
             set;
         } = string.Empty;
+
+        public ChatMessage Clone()
+        {
+            return (ChatMessage)this.MemberwiseClone();
+        }
     }
 }
