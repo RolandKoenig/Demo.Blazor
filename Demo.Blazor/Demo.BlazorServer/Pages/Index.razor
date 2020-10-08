@@ -1,7 +1,28 @@
 ﻿@page "/"
+@using System.ComponentModel.DataAnnotations
 
-<h1>Hello, world!</h1>
+<h3>System Status</h3>
 
-Welcome to your new app.
+<LoadingScreenSwitch IsLoading="(this.Data == null)">
+    <div class="row form-group">
+        <div class="col-md">
+            <label>Installation Guid</label>
+            <input type="text" class="form-control" id="firstName" value="@Data.Guid" readonly>
+        </div>
+        <div class="col-md">
+            <label>Version</label>
+            <input type="text" class="form-control" value="@Data.Version" readonly>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md">
+            <label>Machine</label>
+            <input type="text" class="form-control" value="@Data.MachineName" readonly>
+        </div>
+        <div class="col-md">
+            <label>Start Timestamp</label>
+            <input type="text" class="form-control" value="@Data.StartupTimeStamp.LocalDateTime" readonly>
+        </div>
+    </div>
+</LoadingScreenSwitch>
 
-<SurveyPrompt Title="How is Blazor working for you?" />

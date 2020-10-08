@@ -1,5 +1,4 @@
-﻿using Demo.BlazorWasm.Client.Services;
-using Demo.Shared.Components.Input;
+﻿using Demo.BlazorServer.Services;
 using Demo.Shared.Dto;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
@@ -7,10 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Json;
 using System.Threading.Tasks;
 
-namespace Demo.BlazorWasm.Client.Pages
+namespace Demo.BlazorServer.Pages
 {
     public partial class Logging
     {
