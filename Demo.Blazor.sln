@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Root", "_Root", "{2201A54C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PWA", "PWA", "{BD0E2F9B-06BA-4160-A1D5-ED2FA77302E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Blazor.BlazorWasmPwa", "Demo.Blazor.BlazorWasmPwa\Demo.Blazor.BlazorWasmPwa.csproj", "{D5E809AB-AB11-4989-AC9A-95D23F448CF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Blazor.BlazorWasmPwa", "Demo.Blazor.BlazorWasmPwa\Demo.Blazor.BlazorWasmPwa.csproj", "{D5E809AB-AB11-4989-AC9A-95D23F448CF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
