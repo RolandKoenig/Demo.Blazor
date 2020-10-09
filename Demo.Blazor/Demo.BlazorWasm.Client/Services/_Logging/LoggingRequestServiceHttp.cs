@@ -1,4 +1,5 @@
 ﻿using Demo.Shared.Dto;
+using Flurl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,10 +23,14 @@ namespace Demo.BlazorWasm.Client.Services
             try
             {
                 return await _httpClient.GetFromJsonAsync<LoggingResult>(
-                    $"logginghistory?mintimestamp={request.MinTimeStamp.UtcDateTime.ToString("o")}&" +
-                    $"maxtimestamp={request.MaxTimeStamp.UtcDateTime.ToString("o")}&" +
-                    $"maxentries={request.MaxCountEntries}&" +
-                    $"searchstring={request.SearchString}");
+                    "logginghistory".SetQueryParams(new
+                    {
+                        mintimestamp = request.MinTimeStamp.UtcDateTime.ToString("o"),
+                        maxtimestamp = request.MaxTimeStamp.UtcDateTime.ToString("o"),
+                        maxentries = request.MaxCountEntries,
+                        searchstring = request.SearchString
+                    })
+                    .ToString());
             }
             catch(Exception)
             {
