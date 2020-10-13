@@ -7,7 +7,7 @@ Following features are implemented for my talk on ADC 2020:
  - Shared Razor Components
  - Services / Dependency Injection for Blazor WebAssembly
  - Forms with validation support
- - Cusom validaation rules
+ - Cusom validation rules
  - JavaScript interop
  - PWA
  - Simple chat using SignalR

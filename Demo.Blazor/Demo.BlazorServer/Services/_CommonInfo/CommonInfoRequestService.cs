@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace Demo.BlazorServer.Services
@@ -15,6 +16,7 @@ namespace Demo.BlazorServer.Services
             {
                 Guid = Guid.NewGuid(),
                 MachineName = Environment.MachineName,
+                Framework = RuntimeInformation.FrameworkDescription,
                 StartupTimeStamp = DateTimeOffset.UtcNow.AddDays(-3.5),
                 Version = Assembly.GetExecutingAssembly().GetName().Version.ToString(3)
             });

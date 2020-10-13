@@ -31,6 +31,12 @@ namespace Demo.Shared.Dto
             set;
         } = DateTimeOffset.UtcNow;
 
+        public string Framework
+        {
+            get;
+            set;
+        } = String.Empty;
+
         public List<AlertShortInfo> Alerts
         {
             get;

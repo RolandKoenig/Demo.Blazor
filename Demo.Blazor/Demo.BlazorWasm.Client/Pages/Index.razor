@@ -24,5 +24,15 @@
             <input type="text" class="form-control" value="@Data.StartupTimeStamp.LocalDateTime" readonly>
         </div>
     </div>
+    <div class="row form-group">
+        <div class="col-md">
+            <label>Runtime (Server)</label>
+            <input type="text" class="form-control" readonly value="@Data.Framework" />
+        </div>
+        <div class="col-md">
+            <label>Runtime (Client)</label>
+            <input type="text" class="form-control" readonly value="@System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription" />
+        </div>
+    </div>
 </LoadingScreenSwitch>
 

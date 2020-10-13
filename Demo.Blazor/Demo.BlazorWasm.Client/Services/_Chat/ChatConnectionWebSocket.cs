@@ -12,7 +12,6 @@ namespace Demo.BlazorWasm.Client.Services
     {
         private HubConnection _hubConnection;
 
-
         public bool IsConnected => _hubConnection.State == HubConnectionState.Connected;
 
         public event EventHandler<ChatMessageEventArgs> MessageReceived;
